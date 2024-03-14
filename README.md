@@ -76,9 +76,6 @@ classDiagram
       -DateTime dataLancamento
       -ArrayList<Ator> elenco
       -Diretor diretor
-      Filme(String nomeFilme, String genero, DateTime datalanc,
-            Diretor diretor,
-            ArrayList<Ator>)
       +obtemGenero()
       +obtemDataLancamento()
       +obtemAtores()
