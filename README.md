@@ -51,6 +51,7 @@ Foram desenvolvidas as classes Livro, Membro, Emprestimo
 classDiagram
     Livro <|-- Emprestimo
     Membro <|-- Emprestimo
+
     Membro : +String nomeCompleto
     Membro : -DateTime dataNascimento
     Pessoa : -String sexo
@@ -97,6 +98,7 @@ classDiagram
       +Diretor pesquisarDiretor(String nomeDiretor)
       +Filme pesquisarFilme(String nomeFilme)
     }
+
 ```
 
 # Alguns comandos básicos em GIT para este projeto
