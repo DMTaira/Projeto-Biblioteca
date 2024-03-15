@@ -51,55 +51,41 @@ Foram desenvolvidas as classes Livro, Membro, Emprestimo
 classDiagram
     Livro <|-- Emprestimo
     Membro <|-- Emprestimo
-    Membro : +String nomeCompleto
-    Membro : -DateTime dataNascimento
-    Pessoa : -String sexo
-    Pessoa : -String nacionalidade
-    Pessoa: +obtemDataNascimento()
-    Pessoa: +obtemSexto()
-    Pessoa: +obtemNacionalidade()
-    class Diretor{
-      +String nomeDiretor
-      +String toString()
-      +String getNomeDiretor()
-      +Diretor(String nomeDiretor)
-    }
-    class Ator{
-      -int (static) numeroParticipacaoFilmes
-      -Filme[] participacaoFilmes
-      Ator(String nomeCompleto, DateTime nascimento, String sexo, Filme filme)
-      +obtemParticipacaoFilmes()
-    }
-    class Filme{
-      +String nomeFilme
-      -String genero
-      -DateTime dataLancamento
-      -ArrayList<Ator> elenco
-      -Diretor diretor
-      Filme(String nomeFilme, String genero, DateTime datalanc,
-            Diretor diretor,
-            ArrayList<Ator>)
-      +obtemGenero()
-      +obtemDataLancamento()
-      +obtemAtores()
-    }
-    class IMDB{
-      +ArrayList<Ator> listaAtores
-      +ArrayList<Diretor> listaDiretores
-      +ArrayList<Filme> listaFilmes
-      -String[] tiposGeneros
-      +main(String[] args)
-      +processarEntrada()
-      +processarEntradaAtor()
-      -Ator incluirAtor(String nomeAtor)
-      +processarEntradaDiretor()
-      -Diretor incluirDiretor(String nomeDiretor)
-      +processarEntradaFilme()
-      -Filme incluirFilme(String nomeFilme)
-      +Ator pesquisarAtor(String nomeAtor)
-      +Diretor pesquisarDiretor(String nomeDiretor)
-      +Filme pesquisarFilme(String nomeFilme)
-    }
+    Membro : Long id
+    Membro : String nomeCompleto
+    Membro : String endereco
+    Membro : String nacionalidade
+    Membro : String telefone
+    Membro : String email
+    Membro : LocalDate dataNascimento
+    Membro : Boolean alugou
+    
+    Livro : Long id
+    Livro : String titulo
+    Livro : String autor
+    Livro : String genero
+    Livro : Year anoLancamento
+    Livro : String ISBN
+    Livro : Integer quantidade
+    
+    Emprestimo : Long id
+    Emprestimo : Long membro_id
+    Emprestimo : Long livro_id
+    Emprestimo : LocalDate dataInicial
+    Emprestimo : LocalDate dataParaDevolucao
+    Emprestimo : LocalDate dataDevolucao
+    Emprestimo : LocalDate dataInicial
+    Emprestimo : Integer prazoEmDias
+    Emprestimo : LocalDate dataInicial
+    Emprestimo : LocalDate dataInicial
+    
+    
+    
+    
+    
+    
+   
+   
 ```
 
 # Alguns comandos básicos em GIT para este projeto
